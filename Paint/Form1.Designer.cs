@@ -70,7 +70,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1904, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -124,8 +124,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnSave);
             this.splitContainer1.Panel2.Controls.Add(this.btnRun);
             this.splitContainer1.Panel2.Controls.Add(this.txtCommand);
-            this.splitContainer1.Size = new System.Drawing.Size(1904, 859);
-            this.splitContainer1.SplitterDistance = 1137;
+            this.splitContainer1.Size = new System.Drawing.Size(1370, 612);
+            this.splitContainer1.SplitterDistance = 818;
             this.splitContainer1.TabIndex = 1;
             // 
             // panelPaint
@@ -134,7 +134,7 @@
             this.panelPaint.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPaint.Location = new System.Drawing.Point(0, 0);
             this.panelPaint.Name = "panelPaint";
-            this.panelPaint.Size = new System.Drawing.Size(1133, 855);
+            this.panelPaint.Size = new System.Drawing.Size(814, 608);
             this.panelPaint.TabIndex = 0;
             this.panelPaint.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseClick);
             this.panelPaint.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelPaint_MouseDown);
@@ -144,7 +144,7 @@
             // btnClearAll
             // 
             this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearAll.Location = new System.Drawing.Point(681, 296);
+            this.btnClearAll.Location = new System.Drawing.Point(466, 296);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(75, 24);
             this.btnClearAll.TabIndex = 4;
@@ -155,7 +155,7 @@
             // btnOpen
             // 
             this.btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpen.Location = new System.Drawing.Point(681, 75);
+            this.btnOpen.Location = new System.Drawing.Point(466, 75);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 23);
             this.btnOpen.TabIndex = 3;
@@ -166,7 +166,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(681, 46);
+            this.btnSave.Location = new System.Drawing.Point(466, 46);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 2;
@@ -177,7 +177,7 @@
             // btnRun
             // 
             this.btnRun.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRun.Location = new System.Drawing.Point(681, 17);
+            this.btnRun.Location = new System.Drawing.Point(466, 17);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(75, 23);
             this.btnRun.TabIndex = 1;
@@ -196,7 +196,7 @@
             this.txtCommand.Multiline = true;
             this.txtCommand.Name = "txtCommand";
             this.txtCommand.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCommand.Size = new System.Drawing.Size(675, 855);
+            this.txtCommand.Size = new System.Drawing.Size(460, 608);
             this.txtCommand.TabIndex = 0;
             // 
             // splitContainer3
@@ -225,8 +225,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer1);
-            this.splitContainer3.Size = new System.Drawing.Size(1904, 1017);
-            this.splitContainer3.SplitterDistance = 154;
+            this.splitContainer3.Size = new System.Drawing.Size(1370, 725);
+            this.splitContainer3.SplitterDistance = 109;
             this.splitContainer3.TabIndex = 0;
             // 
             // btnPolygon
@@ -353,7 +353,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.splitContainer3);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
