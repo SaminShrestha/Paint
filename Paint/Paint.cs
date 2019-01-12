@@ -879,7 +879,16 @@ namespace Paint
         {
             this.Close();
         }
-        
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewRepositoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void DrawRectangle(int width, int height)
         {            
