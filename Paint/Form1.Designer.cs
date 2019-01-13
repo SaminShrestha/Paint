@@ -168,11 +168,11 @@
             this.txtCommand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtCommand.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCommand.ForeColor = System.Drawing.Color.White;
-            this.txtCommand.Location = new System.Drawing.Point(987, -2);
+            this.txtCommand.Location = new System.Drawing.Point(908, -2);
             this.txtCommand.Multiline = true;
             this.txtCommand.Name = "txtCommand";
             this.txtCommand.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtCommand.Size = new System.Drawing.Size(246, 614);
+            this.txtCommand.Size = new System.Drawing.Size(325, 528);
             this.txtCommand.TabIndex = 0;
             // 
             // btnClearAll
@@ -187,7 +187,7 @@
             this.btnClearAll.ForeColor = System.Drawing.Color.White;
             this.btnClearAll.Location = new System.Drawing.Point(30, 275);
             this.btnClearAll.Name = "btnClearAll";
-            this.btnClearAll.Size = new System.Drawing.Size(75, 24);
+            this.btnClearAll.Size = new System.Drawing.Size(75, 29);
             this.btnClearAll.TabIndex = 4;
             this.btnClearAll.Text = "Clear Texts";
             this.btnClearAll.UseVisualStyleBackColor = false;
