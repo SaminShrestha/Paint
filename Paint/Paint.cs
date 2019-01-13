@@ -777,28 +777,35 @@ namespace Paint
 
         private int GetLoopStartLineNumber()
         {
-            int numberOfLines = txtCommand.Lines.Length;
-            int lineNum = 0;
-
-            for (int i = 0; i < numberOfLines; i++)
+            try
             {
-                String oneLineCommand = txtCommand.Lines[i];
-                oneLineCommand = Regex.Replace(oneLineCommand, @"\s+", " ");
-                string[] words = oneLineCommand.Split(' ');
-                //removing white spaces in between words
-                for (int j = 0; j < words.Length; j++)
+                int numberOfLines = txtCommand.Lines.Length;
+                int lineNum = 0;
+
+                for (int i = 0; i < numberOfLines; i++)
                 {
-                    words[j] = words[j].Trim();
+                    String oneLineCommand = txtCommand.Lines[i];
+                    oneLineCommand = Regex.Replace(oneLineCommand, @"\s+", " ");
+                    string[] words = oneLineCommand.Split(' ');
+                    //removing white spaces in between words
+                    for (int j = 0; j < words.Length; j++)
+                    {
+                        words[j] = words[j].Trim();
+                    }
+                    String firstWord = words[0].ToLower();
+                    oneLineCommand = oneLineCommand.Trim();
+                    if (firstWord.Equals("loop"))
+                    {
+                        lineNum = i + 1;
+
+                    }
                 }
-                String firstWord = words[0].ToLower();
-                oneLineCommand = oneLineCommand.Trim();
-                if (firstWord.Equals("loop"))
-                {
-                    lineNum = i + 1;
-                    
-                }
+                return lineNum;
             }
-            return lineNum;
+            catch(Exception e)
+            {
+                return 0;
+            }
 
         }
 
