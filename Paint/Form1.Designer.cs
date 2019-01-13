@@ -34,6 +34,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewRepositoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelPaint = new System.Windows.Forms.Panel();
             this.txtCommand = new System.Windows.Forms.TextBox();
@@ -42,6 +43,10 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnRun = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnPolygon = new System.Windows.Forms.Button();
             this.btnCircle = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,11 +58,6 @@
             this.btnEraser = new System.Windows.Forms.Button();
             this.btnPen = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.label2 = new System.Windows.Forms.Label();
-            this.viewRepositoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -96,7 +96,7 @@
             // 
             this.openToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -104,7 +104,7 @@
             // 
             this.saveToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -112,9 +112,17 @@
             // 
             this.exitToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // viewRepositoryToolStripMenuItem
+            // 
+            this.viewRepositoryToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewRepositoryToolStripMenuItem.Name = "viewRepositoryToolStripMenuItem";
+            this.viewRepositoryToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
+            this.viewRepositoryToolStripMenuItem.Text = "View Repository";
+            this.viewRepositoryToolStripMenuItem.Click += new System.EventHandler(this.viewRepositoryToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
@@ -273,9 +281,56 @@
             this.splitContainer3.SplitterDistance = 93;
             this.splitContainer3.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(144, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 19);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Eraser:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(144, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 19);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Pencil:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(48, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 19);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Shapes:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(438, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Color Picker:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // btnPolygon
             // 
-            this.btnPolygon.BackColor = System.Drawing.Color.Transparent;
+            this.btnPolygon.BackColor = System.Drawing.Color.White;
             this.btnPolygon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPolygon.BackgroundImage")));
             this.btnPolygon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPolygon.FlatAppearance.BorderSize = 0;
@@ -411,61 +466,6 @@
             this.btnPen.TabIndex = 0;
             this.btnPen.UseVisualStyleBackColor = false;
             this.btnPen.Click += new System.EventHandler(this.btnPen_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(438, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Color Picker:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // viewRepositoryToolStripMenuItem
-            // 
-            this.viewRepositoryToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewRepositoryToolStripMenuItem.Name = "viewRepositoryToolStripMenuItem";
-            this.viewRepositoryToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.viewRepositoryToolStripMenuItem.Text = "View Repository";
-            this.viewRepositoryToolStripMenuItem.Click += new System.EventHandler(this.viewRepositoryToolStripMenuItem_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 19);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Shapes:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(144, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 19);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Pencil:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(144, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 19);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Eraser:";
             // 
             // MsPaint
             // 
