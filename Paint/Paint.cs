@@ -48,6 +48,10 @@ namespace Paint
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
             addPenSizes();
         }
+
+        /**
+		 * Draws shape where the mouse pointer is placed
+		 */
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             switch (keyData)
@@ -58,18 +62,26 @@ namespace Paint
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        /**
+         *Options for pen size
+            */
         private void addPenSizes() {
             cboSize.Items.Clear();
             cboSize.Items.AddRange(new String[] {"1", "2", "4", "6", "8"});
             cboSize.SelectedIndex = 0;
         }
 
+        /**
+         *Options for shape size
+             */
         private void addDrawingSizes()
         {
             cboSize.Items.Clear();
             cboSize.Items.AddRange(new String[] { "10", "20", "40", "50", "100" });
             cboSize.SelectedIndex = 0;
         }
+
 
         private void MsPaint_Load(object sender, EventArgs e)
         {
@@ -79,6 +91,9 @@ namespace Paint
             panelPaint.Cursor = new Cursor(Properties.Resources.pen.GetHicon());
         }
 
+        /**
+         * Code for color chooser 
+         */
         private void btnChooseColor_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() != DialogResult.Cancel) {
@@ -88,6 +103,9 @@ namespace Paint
             pen = new Pen(mainColor, size);
         }
 
+        /**
+         * Turns mouse cursor to a pen after selecting the pen icon
+         */
         private void btnPen_Click(object sender, EventArgs e)
         {
             cboSize.Enabled = true;
@@ -99,6 +117,9 @@ namespace Paint
 
         }
 
+        /**
+         * Turns mouse cursor to an eraser after selecting the eraser option
+         */
         private void btnEraser_Click(object sender, EventArgs e)
         {
             active = "eraser";            
@@ -109,6 +130,9 @@ namespace Paint
 
         }
 
+        /**
+         * Allows user to draw rectangle after selecting the rectangle icon
+         */
         private void btnRectangle_Click(object sender, EventArgs e)
         {
             active = "rectangle";
@@ -119,6 +143,9 @@ namespace Paint
             cboSize.Enabled = true;
         }
 
+        /**
+         * Allows user to draw triangle after selecting the triangle icon
+         */
         private void btnTriangle_Click(object sender, EventArgs e)
         {
             active = "triangle";
@@ -129,6 +156,9 @@ namespace Paint
             cboSize.Enabled = true;
         }
 
+        /**
+         * Allows user to draw circle after selecting the circle icon
+         */
         private void btnCircle_Click(object sender, EventArgs e)
         {
             active = "circle";
@@ -138,6 +168,10 @@ namespace Paint
             addDrawingSizes();
             cboSize.Enabled = true;
         }
+
+        /**
+         * Allows user to draw polygon after selecting the polygon icon
+         */
         private void btnPolygon_click(object sender, EventArgs e)
         {
             active = "polygon";
@@ -257,6 +291,9 @@ namespace Paint
             }
         }
 
+        /**
+         * Opens file explorer for the user to chosoe the commands
+         */
         private void btnOpen_Click(object sender, EventArgs e)
         {
             if (openFile.ShowDialog() == DialogResult.OK) {
@@ -273,11 +310,17 @@ namespace Paint
             }
         }
 
+        /**
+         * Clears the text area where the command is written
+         */
         private void btnClearAll_Click(object sender, EventArgs e)
         {
             txtCommand.Text = "";
         }
 
+        /**
+         * Saves the program
+         */
         private void btnSave_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -292,6 +335,9 @@ namespace Paint
             
         }
 
+        /**
+         * Runs the command
+         */
         private void btnRun_Click(object sender, EventArgs e)
         {
             hasDrawOrMoveValue = false;
@@ -327,6 +373,10 @@ namespace Paint
 
 
         }
+
+        /**
+         * Loads command to draw shapes
+         */
         private void loadCommand()
         {
             int numberOfLines = txtCommand.Lines.Length;
@@ -370,6 +420,10 @@ namespace Paint
                     
             }
         }
+
+        /**
+         * Runs the command displayed in the text area
+         */
         private void RunCommand(String oneLineCommand) {
             
             Boolean hasPlus = oneLineCommand.Contains('+');
